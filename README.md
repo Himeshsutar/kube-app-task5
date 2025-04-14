@@ -148,6 +148,16 @@ All actions and steps were documented in `README.md` and optionally `Task5.md`.
 
 
 
+**Final Result:**
+
+
+
+![Final Result](https://github.com/user-attachments/assets/19fa3428-ab98-4957-9bff-c3b489048844)
+
+
+
+
+
 Successfully built a Kubernetes cluster locally with Minikube, deploying and scaling applications while utilizing `kubectl` to manage the resources. The workflow includes deployment, scaling, exposing the app with services, and troubleshooting.
 
 ## 📎 Notes
