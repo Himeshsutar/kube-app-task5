@@ -103,7 +103,8 @@ All actions and steps were documented in `README.md` and optionally `Task5.md`.
 ## ✅ Result
 
 * **Cluster Setup & Deployment:**
-    * *Screenshot showing:* Cluster is successfully set up, and the app is deployed in Minikube.
+    ![setup and deploy](https://github.com/user-attachments/assets/3eb23d49-6930-4f14-9e47-682b98d02b44)
+
 * **Service Exposure:**
     * *Screenshot showing:* The app is successfully exposed using a Kubernetes service.
 * **Scaled Deployment:**
