@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-server
+spec:
+  selector:
+    app: nginx-server  # This should match the label of your deployed pods
+  ports:
+    - protocol: TCP
+      port: 80         # The port on which the service will be exposed
+      targetPort: 80    # The port the app is running on inside the container
+  type: NodePort         # Expose service externally on a random port (use LoadBalancer in production)
