@@ -1,126 +1,138 @@
-🚀 TASK 5: Build a Kubernetes Cluster Locally with Minikube
+# TASK 5: Build a Kubernetes Cluster Locally with Minikube
 
-✅ Objective
+## ✅ Objective
 
-Deploy and manage applications in a Kubernetes cluster built using Minikube. Scale, expose, and troubleshoot apps using kubectl commands, YAML configuration files, and Kubernetes best practices.
+Deploy and manage applications in a Kubernetes cluster built using Minikube. Scale, expose, and troubleshoot apps using `kubectl` commands, YAML configuration files, and Kubernetes best practices.
 
-🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 
-Minikube
+* Minikube
 
-kubectl
+* kubectl
 
-Docker
+* Docker
 
-YAML
+* YAML
 
-📁 Project Structure
+## 📁 Project Structure
 
-README.md – Documentation of steps performed and project details.
+* `README.md` – Documentation of steps performed and project details.
 
-deployment.yaml – Kubernetes deployment configuration.
+* `deployment.yaml` – Kubernetes deployment configuration.
 
-service.yaml – Kubernetes service configuration for app exposure.
+* `service.yaml` – Kubernetes service configuration for app exposure.
 
-Task5.md (optional) – Documentation for the individual steps of Task 5.
+* `Task5.md` (optional) – Documentation for the individual steps of Task 5.
 
-Pod logs and Kubernetes state – Generated during the task for troubleshooting.
+* Pod logs and Kubernetes state – Generated during the task for troubleshooting.
 
 
-🔧 Steps Performed
+## 🔧 Steps Performed
 
-🔹 a. Install and Start Minikube Cluster
+**a. Install and Start Minikube Cluster**
 
 Installed Minikube and started the cluster using the following command:
 
-minikube start
+`minikube start`
 
-Verify the cluster status:
+Verified the cluster status:
 
-minikube status
+`minikube status`
 
-🔹 b. Create Deployment
+**b. Create Deployment**
 
-Created a deployment.yaml to define the app's deployment configuration.
+Created a `deployment.yaml` to define the app's deployment configuration.
 
 Applied the deployment using:
 
-kubectl apply -f deployment.yaml
+`kubectl apply -f deployment.yaml`
 
-🔹 c. Expose the Application
+**c. Expose the Application**
 
-Created a service.yaml to expose the application using a Kubernetes Service.
+Created a `service.yaml` to expose the application using a Kubernetes Service.
 
 Applied the service using:
 
-kubectl apply -f service.yaml
+`kubectl apply -f service.yaml`
 
-Verify the service exposure:
+Verified the service exposure:
 
-kubectl get services
+`kubectl get services`
 
 Accessed the app through Minikube:
 
-minikube service nginx-server
+`minikube service nginx-server`
 
-🔹 d. Scale the Deployment  
+*Note: Replace 'nginx-server' with the actual name of your service if different.*
 
-Scaled the nginx-server deployment by adjusting the number of replicas using:
+**d. Scale the Deployment**
 
-kubectl scale deployment nginx-server --replicas=3
+Scaled the `nginx-server` deployment by adjusting the number of replicas using:
 
-Verify the scaled deployment:
+`kubectl scale deployment nginx-server --replicas=3`
 
-kubectl get pods
+*Note: Replace 'nginx-server' with the actual name of your deployment if different.*
 
-🔹 e. Monitor and Troubleshoot Pods
+Verified the scaled deployment:
 
-Used kubectl describe to get detailed information about the pod's status and issues:
+`kubectl get pods`
 
-kubectl describe pod <pod-name>
+**e. Monitor and Troubleshoot Pods**
 
-View the logs of a pod using:
 
-kubectl logs <pod-name>
+Used `kubectl describe` to get detailed information about a pod's status and issues:
 
-🔹 f. Scale and Document Tasks
+`kubectl describe pod <pod-name>`
 
-Scaled the application to the desired number of replicas and verified using kubectl get pods.
+*Replace <pod-name> with the specific pod you want to inspect.*
 
-All actions and steps were documented in README.md and Task5.md.
+Viewed the logs of a pod using:
 
-✅ Result
+`kubectl logs <pod-name>`
 
-1. Cluster Setup & Deployment
+*Replace <pod-name> with the specific pod whose logs you want to view.*
 
-Screenshot: Cluster is successfully set up and the app is deployed in Minikube.
+**f. Scale and Document Tasks**
 
-2. Service Exposure
+Scaled the application to the desired number of replicas (e.g., 3 as shown in step d) and verified using:
 
-Screenshot: The app is successfully exposed using a Kubernetes service.
+`kubectl get pods`
 
-3. Scaled Deployment
+All actions and steps were documented in `README.md` and optionally `Task5.md`.
 
-Screenshot: The app has been scaled with multiple replicas running.
+## ✅ Result
 
-4. Monitoring & Troubleshooting
+* **Cluster Setup & Deployment:**
+    * *Screenshot showing:* Cluster is successfully set up, and the app is deployed in Minikube.
+* **Service Exposure:**
+    * *Screenshot showing:* The app is successfully exposed using a Kubernetes service.
+* **Scaled Deployment:**
+    * *Screenshot showing:* The app has been scaled with multiple replicas running.
+* **Monitoring & Troubleshooting:**
+    * *Screenshot showing:* Logs are being monitored and pod details are described for troubleshooting.
+* **Final Review:**
+    * *Screenshot showing:* Versioning and scaling tasks are completed successfully.
 
-Screenshot: Logs are being monitored and pod details are described for troubleshooting.
+Successfully built a Kubernetes cluster locally with Minikube, deploying and scaling applications while utilizing `kubectl` to manage the resources. The workflow includes deployment, scaling, exposing the app with services, and troubleshooting.
 
-5. Final Review
+## 📎 Notes
 
-Screenshot: Versioning and scaling tasks are completed successfully.
+* Minikube is used to simulate a local Kubernetes environment, perfect for testing and development purposes.
 
-Successfully built a Kubernetes cluster locally with Minikube, deploying and scaling applications while utilizing kubectl to manage the resources. The workflow includes deployment, scaling, exposing the app with services, and troubleshooting.
+* Always verify your pod and service status with:
 
-📎 Notes
+    `kubectl get pods`
 
-Minikube is used to simulate a local Kubernetes environment, perfect for testing and development purposes.
+    `kubectl get services`
 
-Always verify your pod and service status with kubectl get pods and kubectl get services.
+* When scaling, ensure the replicas are properly created and healthy by checking:
 
-When scaling, ensure the replicas are properly created and healthy by checking kubectl get pods and kubectl describe.
+    `kubectl get pods`
 
-Tags are not needed for this task as it's more about cluster management and scaling.
+    `kubectl describe deployment <deployment-name>`
 
-Use kubectl describe for troubleshooting and analyzing pod details in case of issues (e.g., ImagePullBackOff).
+    *Example: `kubectl describe deployment nginx-server`*
+
+* Tags are not needed for this task as it's more about cluster management and scaling.
+
+* Use `kubectl describe pod <pod-name>` for troubleshooting and analyzing pod details in case of issues (e.g., ImagePullBackOff, CrashLoopBackOff).
