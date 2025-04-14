@@ -103,16 +103,50 @@ All actions and steps were documented in `README.md` and optionally `Task5.md`.
 ## ✅ Result
 
 * **Cluster Setup & Deployment:**
-    ![setup and deploy](https://github.com/user-attachments/assets/3eb23d49-6930-4f14-9e47-682b98d02b44)
+  
+![setup and deploy](https://github.com/user-attachments/assets/3eb23d49-6930-4f14-9e47-682b98d02b44)
+
+
 
 * **Service Exposure:**
-    * *Screenshot showing:* The app is successfully exposed using a Kubernetes service.
+  
+
+![services](https://github.com/user-attachments/assets/ece723aa-db93-468b-856d-fc14b07b26e5)
+
+
+  
 * **Scaled Deployment:**
-    * *Screenshot showing:* The app has been scaled with multiple replicas running.
+  
+
+![scaled](https://github.com/user-attachments/assets/d2716a0b-bf67-4d1f-9bef-6d603d3a528d)
+
+ 
+
+  
 * **Monitoring & Troubleshooting:**
-    * *Screenshot showing:* Logs are being monitored and pod details are described for troubleshooting.
-* **Final Review:**
-    * *Screenshot showing:* Versioning and scaling tasks are completed successfully.
+
+
+
+![Monitoring](https://github.com/user-attachments/assets/5de59584-769e-4673-ae7d-3080a802a1fa)
+
+
+
+
+
+![describe kube](https://github.com/user-attachments/assets/3a46640c-2578-454a-a6b2-bae2ac421288)
+
+
+
+
+    
+**Final Review:**
+
+
+
+![final-overview](https://github.com/user-attachments/assets/a58a8647-b48a-4f5a-b5d9-c026fc2988cf)
+
+
+
 
 Successfully built a Kubernetes cluster locally with Minikube, deploying and scaling applications while utilizing `kubectl` to manage the resources. The workflow includes deployment, scaling, exposing the app with services, and troubleshooting.
 
